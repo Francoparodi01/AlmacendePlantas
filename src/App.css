@@ -25,7 +25,6 @@ ul{
   background-color: #345733;
   color: white;
   -webkit-text-stroke: 0.2px rgb(0, 0, 0);
-  align-items: center;
   justify-content: center;
   height: 35px;
   display: flex;
@@ -55,6 +54,7 @@ slogan{
   border-bottom: 1px solid #b4b4b4a4;
   box-shadow: 0px 13px 15px -8px rgba(0,0,0,0.64);
   padding-top: 10px;
+  position: relative;
 }
 .headContainer{
   margin: 2rem 8rem 2rem 8rem;
@@ -77,9 +77,15 @@ slogan{
 }
 .carrouselContainer{
   height: 400px;
-  width: 300px;
+    display: grid;
+    place-content: center;
+    background-color: #faf6e9;
 }
+
 .carrousel{
   display: flex;
   justify-content: center;
+}   
+.carrouselInterno{
+  margin-top: 80px;
 }
