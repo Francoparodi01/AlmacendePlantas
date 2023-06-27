@@ -6,9 +6,9 @@ const Header = () => {
         <div className='headContainer'>
             <ul className='ulHeader'>
                 <BsTreeFill className='logo'/>
-                <li className='headerList'>Inicio</li>
-                <li className='headerList'>Productos</li>
-                <li className='headerList'>Quiénes somos</li>
+                <a className='headerList' href="#" >Inicio</a>
+                <a className='headerList' href="#" >Productos</a>
+                <a className='headerList' href="#" >Quiénes somos</a>
             </ul>
         </div>
     </div>

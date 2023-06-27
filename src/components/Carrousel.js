@@ -7,7 +7,7 @@ function Carrousel() {
   return (
     <div className='carrouselContainer'>
       <div className='carrouselInterno'> 
-      <Carousel interval={8000}>
+      <Carousel interval={8000} slide>
       <Carousel.Item>
         <img
           className="d-block w-100"

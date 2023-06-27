@@ -12,11 +12,16 @@
   0.4px 0.6px 0.5px hsl(var(--shadow-color) / 1),
   7.5px 10.5px 9.7px -2.5px hsl(var(--shadow-color) / 1),
   57.3px 79.8px 73.7px -5px hsl(var(--shadow-color) / 0.85);
-  background-color: #faf6e9;
+  --main-bg-color: #faf6e9;
+  background-color: var(--main-bg-color); 
 }
 body{
   padding: 0;
   margin: 0;
+  background-color: var(--main-bg-color);
+}
+a{
+  text-decoration: none;
 }
 ul{
   list-style: none;
@@ -70,22 +75,46 @@ slogan{
 }
 .headerList{
   transition: color 0.5s ease-in-out;
+  text-decoration: none;
+  color: black;
 }
 .headerList:hover{
   color: #538d5d;
   animation: line-fade 0.5s ease-in-out;
 }
 .carrouselContainer{
-  height: 400px;
     display: grid;
     place-content: center;
     background-color: #faf6e9;
 }
-
 .carrousel{
   display: flex;
   justify-content: center;
 }   
 .carrouselInterno{
   margin-top: 80px;
+}
+.col{
+  color: black;
+}
+.imgCont{
+  padding-top: 5rem;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center; 
+}
+.containerGrid{
+  height: 0;
+}
+.row{
+  padding-top: 100vh;
+}
+.imgRedonda{
+  opacity: 0.88;
+  margin-left: 3rem;
+}
+.imgRedonda:hover{
+  color: rgba(194, 194, 194, 0.294);
+  opacity: 1;
+  box-shadow: var(--shadow-elevation-medium);
 }
