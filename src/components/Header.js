@@ -1,5 +1,6 @@
 import React from 'react'
 import {BsTreeFill} from 'react-icons/bs'
+import Search from './Search'
 const Header = () => {
   return (
     <div className='headBox'>
@@ -9,6 +10,7 @@ const Header = () => {
                 <a className='headerList' href="#" >Inicio</a>
                 <a className='headerList' href="#" >Productos</a>
                 <a className='headerList' href="#" >Quiénes somos</a>
+                <Search/>
             </ul>
         </div>
     </div>

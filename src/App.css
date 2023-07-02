@@ -13,7 +13,7 @@
   7.5px 10.5px 9.7px -2.5px hsl(var(--shadow-color) / 1),
   57.3px 79.8px 73.7px -5px hsl(var(--shadow-color) / 0.85);
   --main-bg-color: #faf6e9;
-  background-color: var(--main-bg-color); 
+  background-color:   var(--main-bg-color);
 }
 body{
   padding: 0;
@@ -26,6 +26,25 @@ a{
 ul{
   list-style: none;
 }
+
+/* Fin estilos globales */
+
+/* Keyframes / scripts */ 
+
+/* Codigo para que no aparezca la X en la barra search */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; 
+  height: 15px;  
+  width: 15px;  
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Fin keyframes*/
+
 .sloganContainer{
   background-color: #345733;
   color: white;
@@ -93,6 +112,7 @@ slogan{
 }   
 .carrouselInterno{
   margin-top: 80px;
+  height: 100vh;
 }
 .col{
   color: black;
@@ -102,6 +122,8 @@ slogan{
   background-color: var(--main-bg-color);
   display: flex;
   justify-content: center; 
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
 }
 .containerGrid{
   height: 0;
@@ -110,11 +132,63 @@ slogan{
   padding-top: 100vh;
 }
 .imgRedonda{
-  opacity: 0.88;
+  opacity: 1;
   margin-left: 3rem;
+  height: 12rem;
+
 }
 .imgRedonda:hover{
   color: rgba(194, 194, 194, 0.294);
-  opacity: 1;
+  opacity: .8;
+  background-color: var(--main-bg-color);
+
   box-shadow: var(--shadow-elevation-medium);
+  transform: scale(1.06);
+  transition: 0.3s ease;
+
+}
+.divSeccion{
+  display: flex;
+}
+.pieImgSeccion{
+  font-weight: bold;
+  text-align: center;
+  margin-left: 45px;
+}
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+.botonBusqueda{
+  outline-style: black;
+}
+.botonBusqueda:focus {
+  outline: none;
+  box-shadow: none;
+}
+#form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #198754 ;
+}
+.dropdown {
+  border: 1px solid black;
+  width: 100%;
+  border-bottom: none;
+  box-sizing: border-box;
+  position: absolute;
+  display: none;
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+.search-inner {
+  display: flex;
 }
