@@ -104,7 +104,7 @@ slogan{
 .carrouselContainer{
     display: grid;
     place-content: center;
-    background-color: #faf6e9;
+    background-color: var(--main-bg-color)
 }
 .carrousel{
   display: flex;
@@ -170,17 +170,29 @@ slogan{
   box-shadow: none;
   border-color: #198754 ;
 }
-.dropdown {
-  border: 1px solid black;
-  width: 100%;
-  border-bottom: none;
-  box-sizing: border-box;
-  position: absolute;
-  display: none;
+.search-container{
+  position: relative; 
+}
+.form-containerl{
+  margin-right: 10px;
+  position: relative;
+  width: 100%
 }
 
-.dropdown:empty {
-  border: none;
+.dropdown {
+  border: 1px solid rgba(0, 0, 0, 0.487);
+  box-sizing: border-box;
+  position: absolute !important;
+  top: 100%; 
+  z-index: 2;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.675);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown-row {
@@ -189,6 +201,10 @@ slogan{
   margin: 2px 0;
 }
 
-.search-inner {
-  display: flex;
+.dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.386);
+}
+
+.dropdown-row:hover {
+  color: white;
 }
