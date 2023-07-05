@@ -10,6 +10,7 @@ function ContenedorGrids() {
     <div  className={`my-component ${fadeInClass}`}>
       <Container className='containerGrid'>
           <Col><SeccionImagen/></Col>
+          <Col><div>hola como estas</div></Col>
       </Container>
     </div>
   );
