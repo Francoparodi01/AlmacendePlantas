@@ -1,5 +1,5 @@
 import React from 'react'
-import limonRedondo from '../assetes/limon.png'
+import limonRedondo from '../assets/limon.png'
 
 export const SeccionImagen = () => {
   return (
@@ -11,7 +11,7 @@ export const SeccionImagen = () => {
           </div>
             <div className="container-img">
             <div class="circle">
-              <limonRedondo/>
+              <img src={limonRedondo}/>
             </div>
             <p className='pieImgSeccion'>Tierra</p>
             </div>
