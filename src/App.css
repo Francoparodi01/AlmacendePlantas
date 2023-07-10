@@ -2,16 +2,12 @@
   padding: 0;
   margin: 0;
   font-family: 'Times New Roman', Times, serif;
-  --shadow-elevation-low:
-  0.4px 0.6px 0.5px hsl(var(--shadow-color) / 1),
-  2px 2.7px 2.5px -5px hsl(var(--shadow-color) / 0.73);
---shadow-elevation-medium:
-  0.4px 0.6px 0.5px hsl(var(--shadow-color) / 1),
-  9.8px 13.6px 12.6px -5px hsl(var(--shadow-color) / 1);
---shadow-elevation-high:
-  0.4px 0.6px 0.5px hsl(var(--shadow-color) / 1),
-  7.5px 10.5px 9.7px -2.5px hsl(var(--shadow-color) / 1),
-  57.3px 79.8px 73.7px -5px hsl(var(--shadow-color) / 0.85);
+  --shadow-color: 0deg 0% 49%;
+  --shadow-elevation-medium:
+    0px 0.3px 0.4px hsl(var(--shadow-color) / 0.08),
+    0.1px 1.7px 2.5px -0.1px hsl(var(--shadow-color) / 0.29),
+    0.2px 3.7px 5.3px -0.3px hsl(var(--shadow-color) / 0.5),
+    0.4px 7.8px 11.2px -0.4px hsl(var(--shadow-color) / 0.71);
   --main-bg-color: #faf6e9;
   --main-dark-bg-color: #444343;
   background-color:   var(--main-bg-color);
@@ -172,9 +168,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .imgCarrousel{
   margin-left: 10px;
+  height: 27rem
+}
+#imagenJazmin{
+  height: 27rem;
 }
 .control-arrow:hover{
-  background-color: white !important;
+  background-color: rgb(94, 94, 94) !important;
   opacity: .3 !important;
 }
 .carrouselInterno{
@@ -204,38 +204,52 @@ input[type="search"]::-webkit-search-cancel-button {
 .row{
   padding-top: 100vh;
 }
-.imgRedonda{
-  opacity: 1;
-  margin-left: 3rem;
-  height: 12rem;
-
-}
-.circle {
-  width: 15em;
-  height: 15em;
-  background-color: rgb(222, 247, 96);
-  border-radius: 50%;
-}
-
-.circle:hover{
-  color: rgba(194, 194, 194, 0.294);
-  opacity: .8;
-  box-shadow: var(--shadow-elevation-medium);
-  transform: scale(1.06);
-  transition: 0.7s ease-in;
-}
 .container-img{
   margin-left: 20px;
   margin-right: 10px;
 }
-.divSeccion{
-  display: flex;
+.circle {
+  width: 10em;
+  height: 10em;
+  background-color: rgb(222, 247, 96);
+  border-radius: 50%;
+}
+#circulo-limon{
+  background-color: #BFF0D4
+}
+#circulo-tierra{
+  background-color: #B8D8E6;
+}
+.circle:hover{
+  color: rgba(194, 194, 194, 0.294);
+  box-shadow: var(--shadow-elevation-medium);
+  transform: scale(1.06);
+  transition: 0.9s ease-in;
+}
+.limonRedondo{
+  width: 9rem;
+  margin: 9px 0 0 9px;
+}
+.macetaRedonda{
+  width: 4rem;
+  margin: -8px 0px 31px 49px;
+}
+.tierraRedonda{
+  width: 9rem;
+  margin: 16px 0 0 9px
+
 }
 .pieImgSeccion{
   font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-top: px;
+  margin-top: 10px;
+}
+.dark .pieImgSeccion{
+  color: white;
+}
+.divSeccion{
+  display: flex;
 }
 .fade-in {
   animation: fadeIn ease 2s;

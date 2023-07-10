@@ -3,8 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import naranja from '../assets/naranja.png'
 import palta from '../assets/palta.png'
 import limon from '../assets/limones.png'
-import cerco from '../assets/bannerCerco.png'
-
+import jazmin from '../assets/lavandasCarrousel.jpg'
 function Carrousel() {
   return (
     <div className='carrouselContainer'>
@@ -16,7 +15,7 @@ function Carrousel() {
         <img src={naranja} className='imgCarrousel' alt="Maceta colgante"/>
       </div>
       <div>
-        <img src={cerco} alt="Otra maceta colgante" />
+        <img src={jazmin} id='imagenJazmin' alt="Otra maceta colgante" />
       </div>
       {/* Agrega más imágenes según tus necesidades */}
     </Carousel>
