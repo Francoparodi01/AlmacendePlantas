@@ -1,15 +1,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Home } from './components/Home';
-
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './components/Home';
+import Productos from './components/Productos';
 
 
 function App() {
   return (
     <>
-      <Home/>
-   </>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/productos' element={<Productos/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
-
 export default App;

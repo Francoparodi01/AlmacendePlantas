@@ -4,19 +4,19 @@ import NavInfo from './NavInfo'
 import NavBar from './NavBar'
 import Carrousel from './Carrousel'
 import ContenedorGrids from './ContenedorGrids'
-import { Route } from 'react-router-dom'
+import ContenedorHeader from './ContenedorHeader'
 
 //componente principal de mi app
 
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
-    <Slogan/>
-    <NavInfo/>
-    <NavBar/>
+    <ContenedorHeader/>
     <Carrousel/>
     <ContenedorGrids/>
   </>
   )
 }
+
+export default Home;
