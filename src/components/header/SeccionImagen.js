@@ -1,7 +1,7 @@
 import React from 'react'
-import limonRedondo from '../assets/limon.png'
-import tierraRedonda from "../assets/tierra.png"
-import macetaRedonda from '../assets/macetas.png'
+import limonRedondo from '../../assets/limon.png'
+import tierraRedonda from "../../assets/tierra.png"
+import macetaRedonda from '../../assets/macetas.png'
 
 export const SeccionImagen = () => {
   return (

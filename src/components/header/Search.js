@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { data } from '../mocks/mocks.js';
+import { data } from '../../mocks/mocks';
 
 const Search = () => {
   const [value, setValue] = useState("");

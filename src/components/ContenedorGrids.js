@@ -1,13 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { SeccionImagen } from './SeccionImagen';
-import { useFadeInOnScroll } from './useFadeInOnScroll';
-function ContenedorGrids() {
-    const fadeInClass = useFadeInOnScroll();
-  
+import { SeccionImagen } from './header/SeccionImagen'
 
+function ContenedorGrids() {
   return (
-    <div  className={`my-component ${fadeInClass}`}>
+    <div>
       <Container className='containerGrid'>
           <Col><SeccionImagen/></Col>
       </Container>

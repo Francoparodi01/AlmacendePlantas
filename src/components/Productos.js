@@ -1,11 +1,13 @@
 import React from 'react'
-import NavBar from './NavBar'
 import ContenedorHeader from './ContenedorHeader'
+import ItemList from './ItemList'
+import GridsProductos from './GridsProductos'
 
 const Productos = () => {
   return (
     <>
         <ContenedorHeader/>
+        <GridsProductos/>
     </>
   )
 }

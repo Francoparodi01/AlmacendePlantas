@@ -4,6 +4,7 @@ import maceta1 from '../assets/macetaInterior.png'
 import tierra1 from '../assets/terraFertil.png'
 import tierra2 from '../assets/tierraArhumus.png'
 import tierra3 from '../assets/tierraelPaisajista.png'
+import rastrillo from '../assets/rastrillo.png'
 
 
  export const data = [
@@ -17,25 +18,7 @@ import tierra3 from '../assets/tierraelPaisajista.png'
     img: maceta1
  },
  {
-    id: "2",
-    name: 'maceta colgante Fibra de coco',
-    category: "macetas",
-    description: "Maceta colgante hecho de fibra de coco",
-    stock: 21,
-    price: 580,
-    img: macetaColgante
- },
- {
-    id: '3',
-    name: 'Maceta saona colgante con gancho',
-    category: "macetas",
-    description: 'Maceta saona colgante con gancho',
-    stock: 43,
-    price: 210,
-    img: macetaColgante2
- },
- {
-    id: '4',
+    id: '2',
     name: 'Tierra Fertil',
     category: "Tierra",
     description: 'Tierra fertilizada lista para plantar',
@@ -44,7 +27,7 @@ import tierra3 from '../assets/tierraelPaisajista.png'
     img: tierra1  
  },
  {
-    id: '5',
+    id: '3',
     name: 'Tierra de humus',
     category: "Tierra",
     description: 'Maceta  olgante con gancho',
@@ -53,12 +36,21 @@ import tierra3 from '../assets/tierraelPaisajista.png'
     img: tierra2
  },
  {
-    id: '6',
+    id: '4',
     name: 'Tierra el paisajista',
     category: "macetas",
     description: 'Tierra fertilizada lista para plantas',
     stock: 599,
     price: 700,
     img: tierra3
+ },
+ {
+   id: '5',
+   name: 'Rastrillo negro con mango',
+   category: 'Herramientas',
+   description: 'Rastrillo para emparejar tierra',
+   stock: 1000, 
+   price: 200,
+   img: rastrillo
  }
 ] 

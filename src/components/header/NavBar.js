@@ -1,8 +1,8 @@
 import React from 'react'
 import {BsTreeFill} from 'react-icons/bs'
 import Search from './Search'
-import DarkModeToggle from './DarkModeToggle'
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
+import DarkModeToggle from '../DarkModeToggle'
+import {Link} from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -10,7 +10,9 @@ const NavBar = () => {
       <div className='headBox'>
         <div className='headContainer'>
           <ul className='ulHeader'>
-              <BsTreeFill className='logo'/>
+              <Link className='logo' to='/'>
+                <BsTreeFill className='logo'/>
+              </Link>
               <Link className='headerList' to='/'>Inicio</Link>
               <Link className='headerList' to="/productos">Productos</Link>
               <Link className='headerList'>Quiénes somos</Link>

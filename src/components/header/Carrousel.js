@@ -1,9 +1,11 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import naranja from '../assets/naranja.png'
-import palta from '../assets/palta.png'
-import limon from '../assets/limones.png'
-import jazmin from '../assets/lavandasCarrousel.jpg'
+import  palta  from '../../assets/palta.png'
+import limon from '../../assets/limon.png'
+import naranja from '../../assets/naranja.png'
+import jazmin from '../../assets/jazminCarrousel.jpg'
+
+
 function Carrousel() {
   return (
     <div className='carrouselContainer'>

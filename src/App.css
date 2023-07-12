@@ -10,22 +10,22 @@
     0.4px 7.8px 11.2px -0.4px hsl(var(--shadow-color) / 0.71);
   --main-bg-color: #faf6e9;
   --main-dark-bg-color: #444343;
-  background-color:   var(--main-bg-color);
+  background-color: var(--main-bg-color)
 }
 body{
   padding: 0;
   margin: 0;
-  background-color: var(--main-bg-color);
+  background-color: #faf6e9;
+}
+.dark body{
+  background-color: var(--main-dark-bg-color);
+  color: white;
 }
 a{
   text-decoration: none;
 }
 ul{
   list-style: none;
-}
-.dark body{
-  background-color: #444343;
-  color: white;
 }
 .dark{
   background-color: var(--main-dark-bg-color);
@@ -107,6 +107,20 @@ input[type="search"]::-webkit-search-cancel-button {
 .logo{
   width: 3rem;
   height: 2rem;
+  text-decoration-style: none;
+  color: black;
+  transition:  0.5s ease-in-out;
+}
+.logo:hover{
+  color: #538d5d;
+  animation: line-fade 0.5s ease-in-out;
+}
+.dark .logo{
+  color: white;
+}
+.dark .logo:hover{
+  color: #3aa13a;
+  animation: line-fade 0.9s ease-in-out
 }
 .ulHeader{
   display: flex;
@@ -129,25 +143,29 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #3aa13a;
   animation: line-fade 0.5 ease-in-out;
 }
+#botonSearch{
+  transition:  0.5s ease-in-out;
+}
 #botonSearch:hover{
   background-color: #345733;
   border-color: #345733;
+  animation: line-fade 0.9s ease-in-out
 }
 .dark #botonSearch{
     color: white;
     border-color: #3aa13a;
+    transition:  0.5s ease-in-out;
 }
 .dark #botonSearch:hover{
   background-color: #3aa13a;
+  animation: line-fade 0.9s ease-in-out
 }
 
 
+/* Fin header */
 
 
 /* seccion principal  */
-
-
-
 
 
 .carrouselContainer{
@@ -201,9 +219,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .containerGrid{
   height: 0;
 }
-.row{
-  padding-top: 100vh;
-}
 .container-img{
   margin-left: 20px;
   margin-right: 10px;
@@ -213,6 +228,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 10em;
   background-color: rgb(222, 247, 96);
   border-radius: 50%;
+  backdrop-filter: blur(15px)
 }
 #circulo-limon{
   background-color: #BFF0D4
@@ -224,7 +240,7 @@ input[type="search"]::-webkit-search-cancel-button {
   color: rgba(194, 194, 194, 0.294);
   box-shadow: var(--shadow-elevation-medium);
   transform: scale(1.06);
-  transition: 0.9s ease-in;
+  transition: 0.4s ease-in;
 }
 .limonRedondo{
   width: 9rem;
@@ -236,7 +252,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .tierraRedonda{
   width: 9rem;
-  margin: 16px 0 0 9px
+  margin: 16px 0 0 9px;
 
 }
 .pieImgSeccion{
@@ -315,7 +331,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
-
 /* Darkmode */ 
 
 
@@ -340,3 +355,57 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #fff;
 }
 
+/* Seccion productos */
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 9px );
+  -webkit-backdrop-filter: blur( 9px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  gap: 30px;
+  padding: 15px;
+  width: 300px;
+  height: 350px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card-container:hover{
+  transform: scale(1.06);
+  transition: 0.3s ease;
+}
+.card-title{
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  font-family: "Roboto";
+}
+
+.card-img{
+  max-height: 350px;
+}
+.item-container{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.product-filter {
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+.columna-filtros{
+  margin-right: 10px;
+}
+
+
+
+/* Fin seccion productos */
