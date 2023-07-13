@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from './components/Home';
-import Productos from './components/Productos';
+import ContenedorProductos from './components/contenedores/ContenedorProductos';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/productos' element={<Productos/>} />
+          <Route path='/productos' element={<ContenedorProductos/>} />
         </Routes>
       </BrowserRouter>
     </>

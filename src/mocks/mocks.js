@@ -1,11 +1,12 @@
-import macetaColgante from '../assets/macetaColgante.png'
-import macetaColgante2 from '../assets/macetaColgante2.png'
 import maceta1 from '../assets/macetaInterior.png'
 import tierra1 from '../assets/terraFertil.png'
 import tierra2 from '../assets/tierraArhumus.png'
 import tierra3 from '../assets/tierraelPaisajista.png'
 import rastrillo from '../assets/rastrillo.png'
-
+import oleotext from '../assets/oleo-Texano.png'
+import lavanda from '../assets/Lavanda.png'
+import ficus from '../assets/ficus.png'
+import elefante from '../assets/elefante.png'
 
  export const data = [
  {
@@ -52,5 +53,42 @@ import rastrillo from '../assets/rastrillo.png'
    stock: 1000, 
    price: 200,
    img: rastrillo
+ },
+ {
+   id: '6',
+   name: 'Oleo texana',
+   category: 'Plantas de cerco',
+   description: 'planta recomendada para cerco',
+   stock: 1000, 
+   price: 200,
+   img: oleotext
+ },
+ {
+   id: '7',
+   name: 'Lavanda',
+   category:'Plantas de exterior',
+   description:'lavanda',
+   stock: 1000,
+   price:100,
+   img: lavanda
+ },
+ {
+   id: '8',
+   name: 'ficus',
+   category: 'planta de exterior',
+   description:'',
+   stock:1000,
+   price:2321,
+   img:ficus,
+ },
+ {
+   id:'9',
+   name:'elefante',
+   category:'exterior',
+   description:'planta decorativa',
+   stock:2311,
+   price:2111,
+   img:elefante,
  }
+
 ] 

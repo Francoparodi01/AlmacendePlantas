@@ -1,7 +1,7 @@
 import React from 'react'
 import Carrousel from './header/Carrousel'
-import ContenedorGrids from './ContenedorGrids'
-import ContenedorHeader from './ContenedorHeader'
+import ContenedorGrids from './contenedores/ContenedorGrids'
+import ContenedorHeader from './contenedores/ContenedorHeader'
 
 //componente principal de mi app
 

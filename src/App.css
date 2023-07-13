@@ -10,7 +10,8 @@
     0.4px 7.8px 11.2px -0.4px hsl(var(--shadow-color) / 0.71);
   --main-bg-color: #faf6e9;
   --main-dark-bg-color: #444343;
-  background-color: var(--main-bg-color)
+  background-color: var(--main-bg-color);
+  --separador: 1px solid #b4b4b4a4;
 }
 body{
   padding: 0;
@@ -86,14 +87,14 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-left: 4rem;
 }
 .navHeaderInfo{
-  border-bottom: 1px solid #7c7c7c90;
+  border-bottom: var(--separador);
   margin-top: 10px;
 }
 .dark .navHeaderInfo{
-  border-bottom: 1px solid #7a7a7a;
+  border-bottom: var(--separador);
 }
 .headBox{
-  border-bottom: 1px solid #b4b4b4a4;
+  border-bottom: var(--separador);
   box-shadow: 0px 13px 15px -8px rgba(0,0,0,0.64);
   padding-top: 10px;
   position: relative;
@@ -356,34 +357,30 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /* Seccion productos */
+#contenedor-lista-productos{
+  width: 830px;
+}
 
 .card-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  background: rgba( 255, 255, 255, 0.25 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 9px );
-  -webkit-backdrop-filter: blur( 9px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  gap: 30px;
   padding: 15px;
-  width: 300px;
-  height: 350px;
   transition: 0.3s ease;
   cursor: pointer;
 }
 
-.card-container:hover{
-  transform: scale(1.06);
-  transition: 0.3s ease;
-}
 .card-title{
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.04em;
   font-family: "Roboto";
+}
+.dark .card-title{
+  color: white
+}
+.dark .card-price{
+  color: white;
 }
 
 .card-img{
@@ -391,19 +388,39 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .item-container{
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  padding: 30px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+    margin-top: 4rem;
+    
 }
 .product-filter {
   padding: 20px;
   border-radius: 5px;
-  margin-top: 30px;
+  margin-top: 6rem;
 }
-.columna-filtros{
-  margin-right: 10px;
+.columna-productos{
+width: none;
+display: block;
+}
+.row-productos{
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+.clase2{
+  background-color: white;
+  border-radius: 6px 4px 0 0;
+  border-bottom: thin solid #eee;
+}
+.dark .clase2{
+  background-color: black;
+}
+.imagen-producto{
+  margin-right: 40px;
+  margin-left: 10px;
+}
+.itemlist-card-detail.row{
+  margin-left: 30px;
+  margin-bottom: 76px;
+  gap: 19px;
 }
 
 

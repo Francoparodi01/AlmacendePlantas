@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import  palta  from '../../assets/palta.png'
-import limon from '../../assets/limon.png'
+import limon from '../../assets/limones.png'
 import naranja from '../../assets/naranja.png'
 import jazmin from '../../assets/jazminCarrousel.jpg'
 
