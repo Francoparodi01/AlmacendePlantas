@@ -1,6 +1,6 @@
 import React from 'react'
 import ContenedorHeader from './ContenedorHeader'
-import GridsProductos from './ContenedorGridsProductos'
+import GridsProductos from '../girds/ContenedorGridsProductos'
 
 const ContenedorProductos = () => {
   return (

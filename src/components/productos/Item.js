@@ -14,11 +14,13 @@ const Item = ({data}) => {
     return (
         <Container id='contenedor-lista-productos'>
       <li className='clase2'>
-      <div className='card-container' onClick={handleNavigate}>
-        <img src={data.img} width={150} alt="product" className='imagen-producto'/>
+      <div className='card-container'//onClick={handleNavigate} >
+      >
+        <img src={data.img} width={150} alt="product" className='imagen-producto' onClick={handleNavigate}/>
+
         <Row className='itemlist-card-detail'>
-        <h1 className='card-title'>{data.name}</h1>
-        <p className='card-title'>${data.price}</p>
+        <h1 className='card-title' onClick={handleNavigate} >{data.name} </h1>
+        <p className='card-price'>${data.price}</p>
         </Row>  
       </div>
       </li>

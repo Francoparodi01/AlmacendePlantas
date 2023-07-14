@@ -8,7 +8,6 @@ const NavInfo = () => {
                 <ul className='ulNav'>
                     <li className='liNav'>1162645140</li>
                     <li className='liNav'>diegop77@gmail.com</li>
-
                 </ul>
             </div>
             <div className='text-right'>

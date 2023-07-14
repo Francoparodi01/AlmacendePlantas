@@ -12,6 +12,8 @@
   --main-dark-bg-color: #444343;
   background-color: var(--main-bg-color);
   --separador: 1px solid #b4b4b4a4;
+  --main-color: #345733;
+  --main-color-dark:#538d5d;
 }
 body{
   padding: 0;
@@ -52,7 +54,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Fin keyframes*/
 
 .sloganContainer{
-  background-color: #345733;
+  background-color: var(--main-color);
   color: white;
   -webkit-text-stroke: 0.2px rgb(0, 0, 0);
   justify-content: center;
@@ -63,7 +65,7 @@ input[type="search"]::-webkit-search-cancel-button {
   transition: color 0.5s ease-in-out;
 }
 .dark .sloganContainer{
-  background-color: #3aa13a;
+  background-color: var(--main-color-dark);
   -webkit-text-stroke: #000;
   transition: color 0.5s ease-in-out;
 
@@ -113,14 +115,14 @@ input[type="search"]::-webkit-search-cancel-button {
   transition:  0.5s ease-in-out;
 }
 .logo:hover{
-  color: #538d5d;
+  color: var(--main-color);
   animation: line-fade 0.5s ease-in-out;
 }
 .dark .logo{
   color: white;
 }
 .dark .logo:hover{
-  color: #3aa13a;
+  color: var(--main-color-dark);
   animation: line-fade 0.9s ease-in-out
 }
 .ulHeader{
@@ -137,28 +139,28 @@ input[type="search"]::-webkit-search-cancel-button {
   color: white;
 }
 .headerList:hover{
-  color: #538d5d;
+  color: var(--main-color);
   animation: line-fade 0.5s ease-in-out;
 }
 .dark .headerList:hover{
-  color: #3aa13a;
+  color: var(--main-color-dark);
   animation: line-fade 0.5 ease-in-out;
 }
 #botonSearch{
   transition:  0.5s ease-in-out;
 }
 #botonSearch:hover{
-  background-color: #345733;
-  border-color: #345733;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
   animation: line-fade 0.9s ease-in-out
 }
 .dark #botonSearch{
     color: white;
-    border-color: #3aa13a;
+    border-color: var(--main-color-dark);
     transition:  0.5s ease-in-out;
 }
 .dark #botonSearch:hover{
-  background-color: #3aa13a;
+  background-color: var(--main-color-dark);
   animation: line-fade 0.9s ease-in-out
 }
 
@@ -323,12 +325,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 .dropdown-row:hover {
-  background-color: #345733;
+  background-color: var(--main-color);
   color: white;
   width: 100%;
 }
 .dark .dropdown-row:hover{
-  background-color: #3aa13a;
+  background-color: var(--main-color-dark);
 }
 
 
@@ -366,15 +368,18 @@ input[type="search"]::-webkit-search-cancel-button {
   flex-direction: row;
   align-items: center;
   padding: 15px;
-  transition: 0.3s ease;
-  cursor: pointer;
+  background-color: #bedcad;
+  border-radius: 8px 8px 8px 0;
+}
+.dark .card-container{
+  background-color: #356e3e
 }
 
 .card-title{
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  font-family: "Roboto";
+  
 }
 .dark .card-title{
   color: white
@@ -397,21 +402,25 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 5px;
   margin-top: 6rem;
 }
+.dark .product-filter{
+  color: white;
+}
 .columna-productos{
 width: none;
 display: block;
 }
 .row-productos{
-  display: flex;
-  flex-wrap: nowrap !important;
+  display: grid !important;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 50px;
 }
 .clase2{
-  background-color: white;
-  border-radius: 6px 4px 0 0;
-  border-bottom: thin solid #eee;
+  box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.64)
 }
 .dark .clase2{
-  background-color: black;
+  box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.64)
 }
 .imagen-producto{
   margin-right: 40px;
@@ -426,3 +435,4 @@ display: block;
 
 
 /* Fin seccion productos */
+
