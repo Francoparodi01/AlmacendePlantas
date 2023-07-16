@@ -39,7 +39,7 @@ import elefante from '../assets/elefante.png'
  {
     id: '4',
     name: 'Tierra el paisajista',
-    category: "macetas",
+    category: "Tierra",
     description: 'Tierra fertilizada lista para plantas',
     stock: 599,
     price: 700,
@@ -66,7 +66,7 @@ import elefante from '../assets/elefante.png'
  {
    id: '7',
    name: 'Lavanda',
-   category:'Plantas de exterior',
+   category:'planta de exterior',
    description:'lavanda',
    stock: 1000,
    price:100,
@@ -84,7 +84,7 @@ import elefante from '../assets/elefante.png'
  {
    id:'9',
    name:'elefante',
-   category:'exterior',
+   category:'planta de exterior',
    description:'planta decorativa',
    stock:2311,
    price:2111,
@@ -92,3 +92,4 @@ import elefante from '../assets/elefante.png'
  }
 
 ] 
+export default data

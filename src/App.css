@@ -8,7 +8,7 @@
     0.1px 1.7px 2.5px -0.1px hsl(var(--shadow-color) / 0.29),
     0.2px 3.7px 5.3px -0.3px hsl(var(--shadow-color) / 0.5),
     0.4px 7.8px 11.2px -0.4px hsl(var(--shadow-color) / 0.71);
-  --main-bg-color: #faf6e9;
+  --main-bg-color: #e7e2c6;
   --main-dark-bg-color: #444343;
   background-color: var(--main-bg-color);
   --separador: 1px solid #b4b4b4a4;
@@ -18,7 +18,7 @@
 body{
   padding: 0;
   margin: 0;
-  background-color: #faf6e9;
+  background-color: #e7e2c6;
 }
 .dark body{
   background-color: var(--main-dark-bg-color);
@@ -361,25 +361,30 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Seccion productos */
 #contenedor-lista-productos{
   width: 830px;
+  
 }
+
 
 .card-container{
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 19px;
   padding: 15px;
   background-color: #bedcad;
   border-radius: 8px 8px 8px 0;
+  box-shadow: 2px -10px 13px 1px rgba(0,0,0,0.64)
 }
 .dark .card-container{
-  background-color: #356e3e
+  background-color: #356e3e;
+  box-shadow: 1px -8px 13px 1px rgb(105 105 105 / 80%);
 }
 
 .card-title{
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  
+  cursor: pointer;
 }
 .dark .card-title{
   color: white
@@ -387,15 +392,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .dark .card-price{
   color: white;
 }
-
-.card-img{
-  max-height: 350px;
-}
 .item-container{
   display: flex;
   flex-direction: column; 
-    margin-top: 4rem;
-    
+  margin-top: 4rem;
 }
 .product-filter {
   padding: 20px;
@@ -416,15 +416,10 @@ display: block;
   grid-column-gap: 1px;
   grid-row-gap: 50px;
 }
-.clase2{
-  box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.64)
-}
-.dark .clase2{
-  box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.64)
-}
 .imagen-producto{
   margin-right: 40px;
   margin-left: 10px;
+  cursor: pointer;
 }
 .itemlist-card-detail.row{
   margin-left: 30px;
@@ -433,6 +428,25 @@ display: block;
 }
 
 
+#inputs-product-filter:focus{
+  outline: 0;
+  border-color: var(--main-color);
+  box-shadow: 0px 0px 7px 0.25rem #3457334d;
+}
+.dark #inputs-product-filter{
+  border-color: var(--main-color-dark);
+}
+.dark #inputs-product-filter:focus{
+  box-shadow:  0px 0px 7px 0.25rem #3457334d;;
+}
+.form-check-input:checked {
+  background-color: #58ac28 !important;
+  border-color: black !important;
+}
+.dark .form-check-input:checked{
+  background-color: #67d4788a !important;
+  border-color: white !important;
+}
 
 /* Fin seccion productos */
 
