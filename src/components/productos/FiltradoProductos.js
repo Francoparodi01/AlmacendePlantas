@@ -1,15 +1,20 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import data from '../../mocks/mocks';
 import Item from './Item';
+import { useNavigate } from 'react-router-dom';
+import ProductoFiltrado from './ProductoFiltrado';
+
 const FiltradoProductos = () => {
+  const navigate = useNavigate();
   const [filteredProducts, setFilteredProducts] = useState([]);
-  
+
   const filterCategory = (category) => {
     const filtered = data.filter((product) => product.category.toLowerCase() === category.toLowerCase());
+    console.log(filtered); // Verificar los datos filtrados en la consola
     setFilteredProducts(filtered);
+    navigate(`/product/filtrado`)
   };
-
   return (
     <div className="product-filter">
       <h2>Categorías</h2>
@@ -64,17 +69,7 @@ const FiltradoProductos = () => {
           />
         </div>
       </Form>
-      <div className='producto-filtrado'>
-  {filteredProducts.map((product) => (
-    <div className='producto-filtrado' key={product.id}>
-      {product.img ? (
-        <Item data={product} />
-      ) : (
-        <p>Image not available</p>
-      )}
-    </div>
-  ))}
-</div>
+      {filteredProducts.length > 0 && <ProductoFiltrado filteredProducts={filteredProducts} />}
     </div>
   );
 };
