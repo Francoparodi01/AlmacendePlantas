@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { data } from '../../mocks/mocks';
+import { useNavigate } from 'react-router-dom';
+
 
 const Search = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('')
+
+  const pushLocation = useNavigate();
+
 
   const onChange = (event) => {
     setValue(event.target.value);
+    
+
   };
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
+    pushLocation(`/search/${searchTerm}`)
     console.log("search ", searchTerm);
   };
+
+
 
   return (
     <div className='search-container'>

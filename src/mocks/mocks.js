@@ -8,7 +8,7 @@ import lavanda from '../assets/Lavanda.png'
 import ficus from '../assets/ficus.png'
 import elefante from '../assets/elefante.png'
 
- export const data = [
+export const data = [
  {
     id: '1',
     name: "Maceta redonda",

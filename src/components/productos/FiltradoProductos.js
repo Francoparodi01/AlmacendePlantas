@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Form } from 'react-bootstrap';
 import data from '../../mocks/mocks';
-
+import Item from './Item';
 const FiltradoProductos = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
-
+  
   const filterCategory = (category) => {
     const filtered = data.filter((product) => product.category.toLowerCase() === category.toLowerCase());
     setFilteredProducts(filtered);
@@ -53,7 +53,7 @@ const FiltradoProductos = () => {
             onChange={() => filterCategory('herramientas')}
           />
         </div>
-        <div key="herramientas" className="mb-3">
+        <div key="Tierra" className="mb-3">
           <Form.Check
             id="inputs-product-filter"
             type="radio"
@@ -64,13 +64,17 @@ const FiltradoProductos = () => {
           />
         </div>
       </Form>
-      <div>
-        {filteredProducts.map((product) => (
-          <div key={product.id}>
-            <p>{product.name}</p>
-          </div>
-        ))}
-      </div>
+      <div className='producto-filtrado'>
+  {filteredProducts.map((product) => (
+    <div className='producto-filtrado' key={product.id}>
+      {product.img ? (
+        <Item data={product} />
+      ) : (
+        <p>Image not available</p>
+      )}
+    </div>
+  ))}
+</div>
     </div>
   );
 };

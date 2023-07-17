@@ -427,7 +427,6 @@ display: block;
   gap: 19px;
 }
 
-
 #inputs-product-filter:focus{
   outline: 0;
   border-color: var(--main-color);
