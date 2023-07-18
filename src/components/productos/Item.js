@@ -8,13 +8,10 @@ const Item = ({data, showFiltrado}) => {
     const handleNavigate = () => {
       navigate(`/product/${data.name}`)
     }
-
-    console.log(data)
-
     //muestro mis items en la pagina productos
 
     return (
-        <Container id='contenedor-lista-productos' style={{ display: showFiltrado ? 'none' : 'block' }}>
+        <Container id='contenedor-lista-productos'>
       <li className='clase2'>
       <div className='card-container'>
         <img src={data.img} width={150} alt="product" className='imagen-producto' onClick={handleNavigate}/>

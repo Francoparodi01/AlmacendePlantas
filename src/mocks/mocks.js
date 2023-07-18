@@ -66,7 +66,7 @@ export const data = [
  {
    id: '7',
    name: 'Lavanda',
-   category:'planta de exterior',
+   category:"plantas de exterior",
    description:'lavanda',
    stock: 1000,
    price:100,
@@ -75,7 +75,7 @@ export const data = [
  {
    id: '8',
    name: 'ficus',
-   category: 'planta de exterior',
+   category: "plantas de exterior",
    description:'',
    stock:1000,
    price:2321,
@@ -84,7 +84,7 @@ export const data = [
  {
    id:'9',
    name:'elefante',
-   category:'planta de exterior',
+   category:"plantas de exterior",
    description:'planta decorativa',
    stock:2311,
    price:2111,

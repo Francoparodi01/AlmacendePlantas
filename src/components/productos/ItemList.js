@@ -5,7 +5,7 @@ import Item from './Item'
 const ItemList = () => {
   return (
       // Busco items de mock
-      <ul>
+      <ul className='ul-item-list'>
     <div className='item-container'>
       {data.length ? data.map(data => {
         return <Item key={data.id} data={data}/>

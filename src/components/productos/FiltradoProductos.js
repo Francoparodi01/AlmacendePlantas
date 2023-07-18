@@ -1,75 +1,103 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap'
 import data from '../../mocks/mocks';
-import Item from './Item';
 import { useNavigate } from 'react-router-dom';
 import ProductoFiltrado from './ProductoFiltrado';
-
 const FiltradoProductos = () => {
-  const navigate = useNavigate();
-  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const filterCategory = (category) => {
-    const filtered = data.filter((product) => product.category.toLowerCase() === category.toLowerCase());
-    console.log(filtered); // Verificar los datos filtrados en la consola
-    setFilteredProducts(filtered);
-    navigate(`/product/filtrado`)
+  const [lenguajeseleccionado, setLenguajeSeleccionado] = useState({
+    "plantas de exterior": false,
+    'Plantas de interior': false,
+    'Herramientas': false,
+    'Tierra': false,
+    'Plantas de cerco': false,
+  });
+  
+  const [datosFiltrados, setDatosFiltrados] = useState([]);
+  const handleOnCheckbox = (e) => {
+    const { value, checked } = e.target;
+    setLenguajeSeleccionado({
+      ...lenguajeseleccionado,
+      [value]: checked,
+    });
+  
+    if (checked) {
+      const resultadoLenguaje = data.filter((item) => item.category === value);
+      setDatosFiltrados([...datosFiltrados, ...resultadoLenguaje]); // Usa el operador spread (...) para agregar los elementos al array existente
+    } else {
+      const resultadoLenguaje = datosFiltrados.filter(
+        (item) => item.category !== value
+      );
+      setDatosFiltrados(resultadoLenguaje); // Actualiza el estado directamente con el array filtrado
+    }
   };
-  return (
+
+  const navigate = useNavigate()
+  const handleNavigate = () =>{
+    navigate('/product/filtrado')
+  }
+  
+  console.log(datosFiltrados)
+
+  return(
     <div className="product-filter">
       <h2>Categorías</h2>
       <Form>
-        <div key="plantasExterior" className="mb-3">
+        <div key="plantas de exterior" className="mb-3">
           <Form.Check
-            id="inputs-product-filter"
             type="radio"
             label="Plantas exterior"
             name="group1"
             value="plantas de exterior"
-            onChange={() => filterCategory('planta de exterior')}
+            onChange={handleOnCheckbox}
+            onClick={handleNavigate}
           />
         </div>
         <div key="plantasInterior" className="mb-3">
           <Form.Check
-            id="inputs-product-filter"
             type="radio"
             label="Plantas interior"
             name="group1"
-            onChange={() => filterCategory('Plantas de interior')}
+            value='Plantas de interior'
+            onChange={handleOnCheckbox}
           />
         </div>
-        <div key="plantasCerco" className="mb-3">
+        <div key="plantas de cerco" className="mb-3">
           <Form.Check
-            id="inputs-product-filter"
             type="radio"
-            label="Plantas de cerco"
+            label="plantas de cerco"
             name="group1"
-            value="plantasCerco"
-            onChange={() => filterCategory('Plantas de cerco')}
+            value="plantas de cerco"
+            onChange={handleOnCheckbox}
           />
         </div>
         <div key="herramientas" className="mb-3">
           <Form.Check
-            id="inputs-product-filter"
             type="radio"
             label="Herramientas"
             name="group1"
-            value="herramientas"
-            onChange={() => filterCategory('herramientas')}
+            value="Herramientas"
+            onChange={handleOnCheckbox}
           />
         </div>
-        <div key="Tierra" className="mb-3">
+        <div key="tierra" className="mb-3">
           <Form.Check
-            id="inputs-product-filter"
             type="radio"
             label="Tierra"
             name="group1"
             value="Tierra"
-            onChange={() => filterCategory('tierra')}
+            onChange={handleOnCheckbox}
           />
         </div>
       </Form>
-      {filteredProducts.length > 0 && <ProductoFiltrado filteredProducts={filteredProducts} />}
+      <div className='item-container'>
+            {datosFiltrados.map(item =>(
+              <div className='card-container' key={item.id}>
+                <img src={item.img} className='imagen-producto'></img>
+              <h1>{item.name}</h1>
+    </div>
+  ))}
+</div>
     </div>
   );
 };

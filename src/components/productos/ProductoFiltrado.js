@@ -1,20 +1,19 @@
 import React from 'react';
-import Item from './Item';
 import ContenedorHeader from '../contenedores/ContenedorHeader';
 
-const ProductoFiltrado = ({filteredProducts}) => {
-    console.log(filteredProducts)
+const ProductoFiltrado = ({datosFiltrados, item}) => {
+console.log(datosFiltrados)
   return (
-    
 <>
 <ContenedorHeader/>
-<div>
-      {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <Item data={product} />
-        </div>
-      ))}
+<div className='item-container'>
+            {datosFiltrados.map(item =>(
+              <div className='card-container' key={item.id}>
+                <img src={item.img} className='imagen-producto'></img>
+              <h1>{item.name}</h1>
     </div>
+  ))}
+</div>
 </>
   );
 };
