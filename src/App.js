@@ -13,6 +13,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/productos' element={<ContenedorProductos/>} />
           <Route path='/product/filtrado' element={<ProductoFiltrado/>}/>
+          <Route path="/category/:categoryId"element={<ProductoFiltrado/>}/>
         </Routes>
       </BrowserRouter>
     </>

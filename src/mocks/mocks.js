@@ -21,7 +21,7 @@ export const data = [
  {
     id: '2',
     name: 'Tierra Fertil',
-    category: "Tierra",
+    category: "tierra",
     description: 'Tierra fertilizada lista para plantar',
     stock: 300,
     price: 800,
@@ -30,7 +30,7 @@ export const data = [
  {
     id: '3',
     name: 'Tierra de humus',
-    category: "Tierra",
+    category: "tierra",
     description: 'Maceta  olgante con gancho',
     stock: 3500,
     price: 1050,
@@ -39,7 +39,7 @@ export const data = [
  {
     id: '4',
     name: 'Tierra el paisajista',
-    category: "Tierra",
+    category: "tierra",
     description: 'Tierra fertilizada lista para plantas',
     stock: 599,
     price: 700,
@@ -48,7 +48,7 @@ export const data = [
  {
    id: '5',
    name: 'Rastrillo negro con mango',
-   category: 'Herramientas',
+   category: 'herramientas',
    description: 'Rastrillo para emparejar tierra',
    stock: 1000, 
    price: 200,
@@ -57,7 +57,7 @@ export const data = [
  {
    id: '6',
    name: 'Oleo texana',
-   category: 'Plantas de cerco',
+   category: 'plantasDeCerco',
    description: 'planta recomendada para cerco',
    stock: 1000, 
    price: 200,
@@ -66,7 +66,7 @@ export const data = [
  {
    id: '7',
    name: 'Lavanda',
-   category:"plantas de exterior",
+   category:"plantasDeExterior",
    description:'lavanda',
    stock: 1000,
    price:100,
@@ -75,7 +75,7 @@ export const data = [
  {
    id: '8',
    name: 'ficus',
-   category: "plantas de exterior",
+   category: "plantasDeExterior",
    description:'',
    stock:1000,
    price:2321,
@@ -84,7 +84,7 @@ export const data = [
  {
    id:'9',
    name:'elefante',
-   category:"plantas de exterior",
+   category:"plantasDeExterior",
    description:'planta decorativa',
    stock:2311,
    price:2111,

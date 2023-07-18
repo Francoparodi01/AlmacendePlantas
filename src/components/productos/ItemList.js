@@ -1,6 +1,7 @@
 import React from 'react'
 import {data} from '../../mocks/mocks'
 import Item from './Item'
+import ProductoFiltrado from './ProductoFiltrado'
 
 const ItemList = () => {
   return (
