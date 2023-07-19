@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import data from '../../mocks/mocks';
 
-const FormProductos = ({categoria}) => {
+const FormProductos = () => {
   const navigate = useNavigate();
   
   const handleNavigate = (e) => {
@@ -18,6 +18,7 @@ const FormProductos = ({categoria}) => {
       <Form>
         <div key="plantas de exterior" className="mb-3">
           <Form.Check
+            id="inputs-product-filter"
             type="radio"
             label="Plantas exterior"
             name="group1"
@@ -27,6 +28,7 @@ const FormProductos = ({categoria}) => {
         </div>
         <div key="plantasInterior" className="mb-3">
           <Form.Check
+            id="inputs-product-filter"
             type="radio"
             label="Plantas interior"
             name="group1"
@@ -36,6 +38,7 @@ const FormProductos = ({categoria}) => {
         </div>
         <div key="plantas de cerco" className="mb-3">
           <Form.Check
+            id="inputs-product-filter"
             type="radio"
             label="plantas de cerco"
             name="group1"
@@ -43,8 +46,9 @@ const FormProductos = ({categoria}) => {
             onChange={handleNavigate}
           />
         </div>
-        <div key="Herramientas" className="mb-3">
+        <div key="herramientas" className="mb-3">
           <Form.Check
+            id="inputs-product-filter"
             type="radio"
             label="Herramientas"
             name="group1"
@@ -54,6 +58,7 @@ const FormProductos = ({categoria}) => {
         </div>
         <div key="tierra" className="mb-3">
           <Form.Check
+            id="inputs-product-filter"
             type="radio"
             label="Tierra"
             name="group1"
