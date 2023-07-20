@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 const Item = ({ data }) => {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
+  const handleNavigateId = () => {
     navigate(`/detail/${data.id}`);
   };
 
@@ -17,10 +17,10 @@ const Item = ({ data }) => {
             width={150}
             alt="product"
             className='imagen-producto'
-            onClick={handleNavigate}
+            onClick={handleNavigateId}
           />
           <Row className='itemlist-card-detail'>
-            <h1 className='card-title' onClick={handleNavigate}>{data.name}</h1>
+            <h1 className='card-title' onClick={handleNavigateId}>{data.name}</h1>
             <p className='card-price'>${data.price}</p>
           </Row>
         </div>

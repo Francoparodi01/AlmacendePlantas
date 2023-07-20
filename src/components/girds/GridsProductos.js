@@ -2,7 +2,6 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import ItemList from '../productos/ItemList'
 import FiltradoProductos from '../productos/FormProductos'
-import ProductoFiltrado from '../productos/ProductoFiltrado'
 
 const GridsProductos = () => {
   return (
