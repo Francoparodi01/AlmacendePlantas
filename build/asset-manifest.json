@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d6c98b46.css",
+    "main.js": "/static/js/main.0892ad28.js",
+    "static/js/787.90466060.chunk.js": "/static/js/787.90466060.chunk.js",
+    "static/media/ficus.png": "/static/media/ficus.80e043030146fca53844.png",
+    "static/media/oleo-Texano.png": "/static/media/oleo-Texano.7537cf04448a426e3e9b.png",
+    "static/media/macetas.png": "/static/media/macetas.2951fd0b16450a3cf62f.png",
+    "static/media/palta.png": "/static/media/palta.192670c9a794ad6b9dda.png",
+    "static/media/rastrillo.png": "/static/media/rastrillo.f8b7d227a74652cdea9f.png",
+    "static/media/limones.png": "/static/media/limones.f78813ea4327bb4f9aa6.png",
+    "static/media/tierra.png": "/static/media/tierra.af5979278ee9db69a287.png",
+    "static/media/naranja.png": "/static/media/naranja.f48689c1a311c1373c70.png",
+    "static/media/terraFertil.png": "/static/media/terraFertil.b732441ff1bac22bc668.png",
+    "static/media/macetaInterior.png": "/static/media/macetaInterior.5afdd05d56a1d152317c.png",
+    "static/media/Lavanda.png": "/static/media/Lavanda.bc8aed8ae8a8fa5946f7.png",
+    "static/media/jazminCarrousel.jpg": "/static/media/jazminCarrousel.a77917ff5ccd2ef091bf.jpg",
+    "static/media/elefante.png": "/static/media/elefante.0cf2e52e1e38fd599965.png",
+    "static/media/tierraelPaisajista.png": "/static/media/tierraelPaisajista.992e4e7da0182c485e12.png",
+    "static/media/limon.png": "/static/media/limon.5d64ed553f48c8ab96f6.png",
+    "static/media/tierraArhumus.png": "/static/media/tierraArhumus.d3877416b0e3a570f5e4.png",
+    "index.html": "/index.html",
+    "main.d6c98b46.css.map": "/static/css/main.d6c98b46.css.map",
+    "main.0892ad28.js.map": "/static/js/main.0892ad28.js.map",
+    "787.90466060.chunk.js.map": "/static/js/787.90466060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6c98b46.css",
+    "static/js/main.0892ad28.js"
+  ]
+}
