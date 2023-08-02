@@ -35,6 +35,8 @@ ul{
   animation:line-fade 0.5 ease-in-out; 
 }
 
+
+
 /* Fin estilos globales */
 
 /* Keyframes / scripts */ 
@@ -49,6 +51,17 @@ input[type="search"]::-webkit-search-cancel-button {
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+@keyframes show{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 /* Fin keyframes*/
@@ -365,7 +378,6 @@ input[type="search"]::-webkit-search-cancel-button {
 /* Seccion productos */
 #contenedor-lista-productos{
   width: 830px;
-  
 }
 
 
@@ -377,7 +389,7 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 15px;
   background-color: #bedcad;
   border-radius: 8px 8px 8px 0;
-  box-shadow: 2px -10px 13px 1px rgba(0,0,0,0.64)
+  box-shadow: 2px -10px 13px 1px rgba(0,0,0,0.64);
 }
 .dark .card-container{
   background-color: #356e3e;
@@ -449,9 +461,12 @@ display: block;
   background-color: #58ac28 !important;
   border-color: black !important;
 }
+.form-check-input:checked{
+  background-color: #58ac28 !important;
+  border-color: black !important;
+}
 .dark .form-check-input:checked{
   background-color: #67d4788a !important;
   border-color: white !important;
 }
 /* Fin seccion productos */
-
