@@ -1,5 +1,4 @@
 import React from 'react';
-import ContenedorHeader from '../contenedores/ContenedorHeader';
 import data from '../../mocks/mocks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';

@@ -379,7 +379,16 @@ input[type="search"]::-webkit-search-cancel-button {
 #contenedor-lista-productos{
   width: 830px;
 }
+#contenedor-card-productos{
+  width: 830px;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 250px;
+}
 
+.ul-item-list {
+  margin-top: 90px;
+}
 
 .card-container{
   display: flex;
@@ -444,6 +453,7 @@ display: block;
 }
 .clase2{
   list-style: none;
+  margin-top: 2.5rem;
 }
 
 #inputs-product-filter:focus{

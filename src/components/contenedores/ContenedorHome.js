@@ -1,6 +1,6 @@
 import React from 'react'
 import Carrousel from '../header/Carrousel'
-import ContenedorGrids from '../girds/ContenedorGrids'
+import GridHome from '../girds/GridHome'
 import ContenedorHeader from './ContenedorHeader'
 
 //componente principal de mi app
@@ -11,7 +11,7 @@ const Home = () => {
     <>
     <ContenedorHeader/>
     <Carrousel/>
-    <ContenedorGrids/>
+    <GridHome/>
   </>
   )
 }

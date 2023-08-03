@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import { SeccionImagen } from '../header/SeccionImagen'
 
-function ContenedorGrids() {
+function GridHome() {
   return (
     <div>
       <Container className='containerGrid'>
@@ -12,4 +12,4 @@ function ContenedorGrids() {
   );
 }
 
-export default ContenedorGrids;
+export default GridHome;
