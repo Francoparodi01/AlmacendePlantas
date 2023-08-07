@@ -6,9 +6,7 @@ const GridsItemCard = () => {
   return (
     <div>
       <Container className='containerGrid'>
-        <Row className='row-productos'>
-          <Col className='columna-filtros'><ItemCard/></Col>     
-        </Row>
+          <Col className='columna-card'><ItemCard/></Col>     
       </Container>
     </div>
   )

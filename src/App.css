@@ -404,7 +404,10 @@ input[type="search"]::-webkit-search-cancel-button {
   background-color: #356e3e;
   box-shadow: 1px -8px 13px 1px rgb(105 105 105 / 80%);
 }
-
+.contenedor-card-text{
+  display: flex;
+  flex-direction: column;
+}
 .card-title{
   font-size: 20px;
   line-height: 24px;

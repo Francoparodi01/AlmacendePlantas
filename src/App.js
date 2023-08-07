@@ -5,18 +5,25 @@ import Home from './components/contenedores/ContenedorHome';
 import ContenedorProductos from './components/contenedores/ContenedorProductos';
 import ItemCard from './components/productos/ItemCard'
 import ContenedorFiltrados from './components/contenedores/ContenedorFiltrados'
+import ContenedorItemCard from './components/contenedores/ContenedorItemCard';
+import ShoppingCart from './components/cart/ShoppingCart'
+import { ShoppingCartProvider } from './components/context/CartContext';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+        <BrowserRouter>
+      <ShoppingCartProvider>
+        <Routes> 
           <Route path='/' element={<Home/>}/>
           <Route path='/productos' element={<ContenedorProductos/>} />
           <Route path='/category/:categoryId' element={<ContenedorFiltrados/>}/>
-          <Route path='/detail/:productName' element={<ItemCard/>}/>
+          <Route path='/detail/:productName' element={<ContenedorItemCard/>}/>
+          <Route path='/cart' element={<ShoppingCart/>}/>
         </Routes>
-      </BrowserRouter>
+      </ShoppingCartProvider>
+        </BrowserRouter>
+      
     </>
   );
 }

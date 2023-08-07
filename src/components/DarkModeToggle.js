@@ -10,7 +10,7 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <div className={`dark-mode ${isDarkMode ? 'dark' : ''}`}>
+    <div className={`logo dark-mode ${isDarkMode ? 'dark' : ''}` }>
       <button className="toggle-button" onClick={handleToggle}>
         {isDarkMode ? <FaSun /> : <FaMoon />}
       </button>

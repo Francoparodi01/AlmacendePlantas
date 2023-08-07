@@ -1,12 +1,15 @@
+import { useContext } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
-const Item = ({ data }) => {
+const Item = ({ data}) => {
   const navigate = useNavigate();
 
   const handleNavigateName = () => {
     navigate(`/detail/${data.name}`);
   };
+
 
   return (
     <Container id='contenedor-lista-productos'>
@@ -25,7 +28,6 @@ const Item = ({ data }) => {
           </Row>
         </div>
       </li>
-      
     </Container>
   );
 };
