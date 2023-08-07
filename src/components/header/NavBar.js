@@ -29,10 +29,12 @@ const NavBar = () => {
               <Link className='headerList'>Quiénes somos</Link>
               <Search />
               <DarkModeToggle/>
+              <div>
               <Link className='logo' to='/cart'>
                 <AiOutlineShoppingCart className='logo'/>
-                :{qtty}
               </Link>
+               {qtty}
+              </div>
           </ul>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react'
 import ShoppingCart from '../cart/ShoppingCart'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Container } from 'react-bootstrap'
 
-const GrudCart = () => {
+const GridCard = () => {
   return (
     <>
     <Container className='containerGrid'>
@@ -12,4 +12,4 @@ const GrudCart = () => {
   )
 }
 
-export default GrudCart
+export default GridCard
