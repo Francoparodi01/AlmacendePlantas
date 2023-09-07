@@ -11,11 +11,16 @@ const Search = () => {
     setValue(event.target.value);
   };
 
-  const onSearch = (searchTerm) => {
-    setValue(searchTerm);
-    // Aquí puedes usar el ID del ítem seleccionado para redirigir
-    pushLocation(`/detail/${searchTerm}`);
+  const onSearch = () => {
+    // No es necesario pasar 'value' como argumento aquí
+    pushLocation(`/detail/${value}`);
   };
+
+  const filteredItems = data.filter((item) => {
+    const searchTerm = value.trim().toLowerCase();
+    const name = item.name.toLowerCase();
+    return searchTerm && name.startsWith(searchTerm) && name !== searchTerm;
+  }).slice(0, 2);
 
   return (
     <div className='search-container'>
@@ -32,22 +37,15 @@ const Search = () => {
           />
           <div>
             <div className="dropdown">
-              {data
-                .filter((item) => {
-                  const searchTerm = value.toLowerCase();
-                  const name = item.name.toLowerCase();
-                  return searchTerm && name.startsWith(searchTerm) && name !== searchTerm;
-                })
-                .slice(0, 2)
-                .map((item) => (
-                  <Link to={`/detail/${item.id}`} className="dropdown-row" key={item.id}>
-                    {item.name}
-                  </Link>
-                ))}
+              {filteredItems.map((item) => (
+                <Link to={`/detail/${item.id}`} className="dropdown-row" key={item.id}>
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
-        <Button variant="outline-success" id='botonSearch' onClick={() => onSearch(value)}>
+        <Button variant="outline-success" id='botonSearch' onClick={onSearch}>
           Search
         </Button>
       </Form>

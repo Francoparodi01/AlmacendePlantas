@@ -1,117 +1,99 @@
 import React from 'react';
-import { Row, Container, Col, Button } from 'react-bootstrap';
-import ContenedorHeader from '../contenedores/ContenedorHeader';
-import data from '../../mocks/mocks';
-import {useNavigate, useParams } from 'react-router-dom';
+import { Container, Row, Button } from 'react-bootstrap';
+import { useParams, useNavigate } from 'react-router-dom';
 import NotFound from '../contenedores/NotFound';
 import { IoIosAddCircleOutline } from 'react-icons/io';
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import { get } from 'jquery';
+import data from '../../mocks/mocks';
 
-const ItemCard = (id, qtty ) => {
+const ItemCard = () => {
   const { productName } = useParams();
-  const navigatecart = useNavigate();
-  const [cart, setCart] = useContext(CartContext)
+  const navigate = useNavigate();
+  const [cart, setCart] = useContext(CartContext);
 
-  // Buscar el elemento específico según el 'name' en data
+  // Buscar el producto por nombre en los datos
   const productoSeleccionado = data.find((item) => item.name === productName);
-  console.log(productoSeleccionado);
-  
+
   if (!productoSeleccionado) {
-    // Si el producto no se encuentra, puedes mostrar un mensaje o redireccionar a una página de error.
+    // Producto no encontrado, muestra NotFound o redirige a una página de error.
     return <NotFound />;
   }
 
-  const handleNavigateCart = () => {
-    navigatecart(`/cart`)
-  }
+  const addToCart = () => {
+    // Verificar si el producto ya está en el carrito
+    const itemInCart = cart.find((item) => item.id === productoSeleccionado.id);
 
-
-  const addToCart = () =>{
-    setCart((itemListado) =>{
-      const itemHallado = itemListado.find((item) => item.id === id);
-      if(itemHallado){
-        return itemListado.map((item) =>{
-          if(item.id === id){
-            return {...item, qtty: item.qtty +1}
-          }else{
-            return item
-          }
-        });
-      }else{
-        return [...itemListado, {id, qtty:1}]
-      }
-    });
+    if (itemInCart) {
+      // El producto ya está en el carrito, aumentar la cantidad
+      setCart((cart) =>
+        cart.map((item) =>
+          item.id === productoSeleccionado.id
+            ? { ...item, qtty: item.qtty + 1 }
+            : item
+        )
+      );
+    } else {
+      // El producto no está en el carrito, agregarlo
+      setCart((cart) => [...cart, { id: productoSeleccionado.id, qtty: 1 }]);
+    }
   };
 
-  const removeItem = (id) => {
-    setCart((itemListado) => {
-      if (itemListado.find((item) => item.id === id)?.qtty === 1) {
-        return itemListado.filter((item) => item.id !== id);
+  const removeFromCart = () => {
+    // Encontrar el producto en el carrito
+    const itemInCart = cart.find((item) => item.id === productoSeleccionado.id);
+
+    if (itemInCart) {
+      if (itemInCart.qtty === 1) {
+        // Si la cantidad es 1, eliminar el producto del carrito
+        setCart((cart) => cart.filter((item) => item.id !== productoSeleccionado.id));
       } else {
-        return itemListado.map((item) => {
-          if (item.id === id) {
-            return { ...item, qtty: item.qtty - 1 };
-          } else {
-            return item;
-          }
-        });
+        // Si la cantidad es mayor que 1, reducir la cantidad
+        setCart((cart) =>
+          cart.map((item) =>
+            item.id === productoSeleccionado.id
+              ? { ...item, qtty: item.qtty - 1 }
+              : item
+          )
+        );
       }
-    });
+    }
   };
 
-  const getQttyById = (id) =>{
-    return cart.find((item) => item.id === id)?.qtty || 0;
-  };
-
-  const qtttyPorItem = getQttyById(id);
-
-
-
+  const quantityInCart = cart.find((item) => item.id === productoSeleccionado.id)?.qtty || 0;
 
   return (
-    <>
-      <Container id='contenedor-card-productos'>
-          <div className='card-container'>
-            <img
-              src={productoSeleccionado.img}
-              width={150}
-              alt={`Imagen ${productoSeleccionado.name}`}
-              className='imagen-producto'
-            />
-            <Row className='itemlist-card-detail'>
-              <div className='contenedor-card-text'>
-                <h1 className='card-title'>{productoSeleccionado.name}</h1> 
-                <p className='card-price'>${productoSeleccionado.price}</p>
-                { 
-                  qtttyPorItem ===0 ? (
-                    <button className='' onClick={() => addToCart()}>
-                      <IoIosAddCircleOutline/>
-                      Agregar al carrito
-                    </button>
-                  ) : (
-                    <button onClick={() => addToCart()}>
-                      <IoIosAddCircleOutline/>
-                      Agregar más
-                    </button>
-                  )
-                }
-                {qtttyPorItem >0 &&
-                (
-                  <button onClick={() => removeItem(id)}>-</button>
-                  )
-                }
-                {qtttyPorItem > 0  && (
-                  <p>
-                    Cantidad en el carrito: {qtttyPorItem}
-                  </p>
-                )}
-              </div>
-            </Row>
-          </div>  
-      </Container>
-    </>
+    <Container id='contenedor-card-productos'>
+      <div className='card-container'>
+        <img
+          src={productoSeleccionado.img}
+          width={150}
+          alt={`Imagen ${productoSeleccionado.name}`}
+          className='imagen-producto'
+        />
+        <Row className='itemlist-card-detail'>
+          <div className='contenedor-card-text'>
+            <h1 className='card-title'>{productoSeleccionado.name}</h1>
+            <p className='card-price'>${productoSeleccionado.price}</p>
+            {quantityInCart === 0 ? (
+              <Button onClick={addToCart}>
+                <IoIosAddCircleOutline />
+                Agregar al carrito
+              </Button>
+            ) : (
+              <>
+                <Button onClick={addToCart}>
+                  <IoIosAddCircleOutline />
+                  Agregar más
+                </Button>
+                <Button onClick={removeFromCart}>-</Button>
+                <p>Cantidad en el carrito: {quantityInCart}</p>
+              </>
+            )}
+          </div>
+        </Row>
+      </div>
+    </Container>
   );
 };
 
